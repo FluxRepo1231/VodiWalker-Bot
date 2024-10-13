@@ -3,99 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FluxRepo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>FluxRepo Bot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: 'Poppins', sans-serif;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #ff007a, #ffb74d);
-            overflow: hidden;
+            background: linear-gradient(135deg, #1f1c2c, #928DAB);
+            color: #fff;
         }
+
         .container {
             text-align: center;
-            color: white;
+            animation: fadeIn 1.5s ease-in-out;
         }
-        .main-heading, .sub-heading {
+
+        h1 {
             font-size: 4rem;
-            margin: 0;
-            position: relative;
-            animation: glitch 1.5s infinite;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
         }
-        .main-heading {
-            font-size: 5rem;
+
+        .underline {
+            width: 100px;
+            height: 4px;
+            background-color: #ffcc00;
+            margin: 0 auto;
+            border-radius: 2px;
         }
-        .sub-heading {
-            font-size: 2rem;
-            margin-top: 10px;
-        }
-        .icons {
-            margin-top: 20px;
-        }
-        .icons a {
-            color: white;
-            margin: 0 15px;
-            font-size: 2rem;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .icons a:hover {
-            color: #ffb74d;
-        }
-        @keyframes glitch {
+
+        @keyframes fadeIn {
             0% {
-                transform: translate(0);
-                text-shadow: 1px 1px 0 #fff, -1px -1px 0 #ff007a;
-            }
-            20% {
-                transform: translate(-5px, 5px);
-                text-shadow: 2px 2px 0 #ff007a, -2px -2px 0 #ffb74d;
-            }
-            40% {
-                transform: translate(5px, -5px);
-                text-shadow: 1px 1px 0 #ffb74d, -1px -1px 0 #ff007a;
-            }
-            60% {
-                transform: translate(-5px, -5px);
-                text-shadow: 2px 2px 0 #fff, -2px -2px 0 #ff007a;
-            }
-            80% {
-                transform: translate(5px, 5px);
-                text-shadow: 1px 1px 0 #ff007a, -1px -1px 0 #ffb74d;
+                opacity: 0;
+                transform: translateY(-20px);
             }
             100% {
-                transform: translate(0);
-                text-shadow: 1px 1px 0 #fff, -1px -1px 0 #ff007a;
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-        @media (max-width: 768px) {
-            .main-heading {
-                font-size: 3rem;
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
             }
-            .sub-heading {
-                font-size: 1rem;
-            }
-            .icons a {
-                font-size: 1.5rem;
+            50% {
+                transform: scale(1.05);
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="main-heading">Flux</div>
-        <div class="sub-heading">FluxRepor.net</div>
-        <div class="icons">
-            <a href="https://discord.gg/frNjE23TRx" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-        </div>
+        <h1>FluxRepo Bot</h1>
+        <div class="underline"></div>
     </div>
 </body>
 </html>
-                 
