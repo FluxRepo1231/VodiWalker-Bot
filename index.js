@@ -38,7 +38,7 @@ app.listen(port, () => {
 });
 
 const statusMessages = ["", "Offline"];
-const statusTypes = [ 'dnd', 'idle'];
+const statusTypes = [ '', 'idle'];
 let currentStatusIndex = 0;
 let currentTypeIndex = 0;
 
